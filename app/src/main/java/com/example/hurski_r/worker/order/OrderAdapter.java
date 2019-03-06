@@ -1,15 +1,15 @@
-package com.example.hurski_r.worker;
+package com.example.hurski_r.worker.order;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.hurski_r.worker.R;
+
 import java.util.ArrayList;
-import java.util.List;
 
 public class OrderAdapter extends ArrayAdapter<Order> {
 
@@ -28,14 +28,20 @@ public class OrderAdapter extends ArrayAdapter<Order> {
         View view=inflater.inflate(this.layout, parent, false);
 
         //ImageView flagView = (ImageView) view.findViewById(R.id.flag);
-        TextView nameView = (TextView) view.findViewById(R.id.name);
-        TextView capitalView = (TextView) view.findViewById(R.id.capital);
+        TextView numberView = (TextView) view.findViewById(R.id.numberOfOrder);
+        TextView statusView = (TextView) view.findViewById(R.id.numberOfStatus);
+        TextView adminView = (TextView) view.findViewById(R.id.numberOfAdmin);
+        TextView dateView = (TextView) view.findViewById(R.id.numberOfData);
+        TextView addressView = (TextView) view.findViewById(R.id.numberOfAddress);
 
         Order order = orders.get(position);
 
 
-        nameView.setText(order.getNumber());
-        capitalView.setText(order.getStatus());
+        numberView.setText(order.getNumber());
+        statusView.setText(order.getStatus());
+        adminView.setText(order.getAdmin());
+        dateView.setText(order.getDate());
+        addressView.setText(order.getAddress());
 
         return view;
     }

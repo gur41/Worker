@@ -1,4 +1,4 @@
-package com.example.hurski_r.worker;
+package com.example.hurski_r.worker.order;
 
 import java.util.Date;
 
